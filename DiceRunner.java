@@ -25,18 +25,17 @@ public class DiceRunner{
 				System.out.println("Snake eyes has not taken place, reroll!");
 
 			System.out.println();
-	}
-		while(check == false);
+}while(check == false);
+
 		System.out.println("\n\n");
 
+//Test 2
 		DiceHolder cup = new DiceHolder();
-
-		for(int x=0; x<5; x++){
+		int checkDice = 1;
 		while(checkDice == 1){
 			int rand = (int)(Math.random()*12)+3;
-			cup.addDie(new Die());
+			checkDice = cup.addDie(new Die());
+			System.out.println(cup);
+		}
 	}
-}
-}
-
 }

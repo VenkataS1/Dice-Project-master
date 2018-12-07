@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 public class DiceHolder{
-	private ArrayList<Die> container;
+	private ArrayList<Die> container = new ArrayList<>();;
 
 		public DiceHolder(){
 			Die die = new Die();
@@ -27,7 +27,7 @@ public class DiceHolder{
 		public String toString(){
 			String dice = "";
 			for(int x=0; x<container.size(); x++){
-				dice+= "Dice # "+ (x+1) +"value is"+ (container.get(x)).getValue();
+				dice+= "Dice # "+ (x+1) +" value is "+ (container.get(x)).getValue() + ", ";
 }//for
 
 			return dice;
