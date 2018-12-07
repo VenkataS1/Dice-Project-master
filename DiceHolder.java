@@ -2,10 +2,9 @@ import java.util.ArrayList;
 public class DiceHolder{
 	private ArrayList<Die> container;
 
-	String dice;
-
 		public DiceHolder(){
-			container.add(new Die());
+			Die die = new Die();
+			container.add(die);
 }//public DiceHolder
 
 		public int addDie(Die die){
@@ -25,7 +24,8 @@ public class DiceHolder{
 	}//for
 }//shake
 
-		public String toString(String dice){
+		public String toString(){
+			String dice = "";
 			for(int x=0; x<container.size(); x++){
 				dice+= "Dice # "+ (x+1) +"value is"+ (container.get(x)).getValue();
 }//for

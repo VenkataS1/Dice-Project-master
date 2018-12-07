@@ -4,38 +4,39 @@ public class DiceRunner{
 //Test 1
 		Die die1 = new Die();
 		Die die2 = new Die();
-		int numRolls = 0;
+		int rollNum = 0;
 		boolean check = false;
 
 		do{
-			rollBoth(die1, die2);
-			numRolls++;
+			die1.roll();
+			die2.roll();
+			rollNum++;
 
-			System.out.println("Amount of rolls: "+numRolls);
+			System.out.println("Roll Number: "+rollNum);
 			System.out.println(die1.toString());
 			System.out.println(die2.toString());
 
-			if(snakeEyes(die1, die2))
+			if(die1.getValue() == die2.getValue() && die1.getValue() == 1)
 				check = true;
 
 			if(check)
-				System.out.println("Snake eyes has taken place after "+numRolls+ "rolls");
+				System.out.println("Snake eyes has taken place after "+rollNum+" rolls");
 			else
 				System.out.println("Snake eyes has not taken place, reroll!");
 
 			System.out.println();
 	}
 		while(check == false);
-}
-//method to roll both die from Test 1
+		System.out.println("\n\n");
 
-		public static void rollBoth(Die die1, Die die2){
-			die1.roll();
-			die2.roll();
-}
-//method to check if snake eyes has taken place to Test 1
+		DiceHolder cup = new DiceHolder();
 
-		public static boolean snakeEyes(Die die1, Die die2){
-			return die1.getValue() == die2.getValue() && die1.getValue() == 1;
+		for(int x=0; x<5; x++){
+		while(checkDice == 1){
+			int rand = (int)(Math.random()*12)+3;
+			cup.addDie(new Die());
 	}
+}
+}
+
 }
